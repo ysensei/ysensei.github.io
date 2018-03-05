@@ -1,0 +1,60 @@
+
+.container {
+    padding: 0 120px;
+}
+.container .first-part .head {
+    padding: 0 30px;
+}
+.container .first-part .cont {
+    padding: 30px 0 30px 60px;
+}
+.container .first-part .info .row{
+    display: flex;
+}
+.container .first-part .info .row .col{
+    flex: 1;
+}
+.container .first-part .info .row .m5 {
+    width: 50%;
+}
+.container .first-part .btn {
+    margin-top: 20px;
+}
+.container .first-part .btn a {
+    display: block;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.container .title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+.container .second-part .cont {
+    display: flex;
+    margin-top: 20px;
+}
+.container .second-part .cont .left {
+    flex: 1;
+}
+.container .second-part .cont .right {
+    flex: 1;
+}
+
+.container .third-part .cont {
+    margin-top: 20px;
+    text-indent: 34px;
+    line-height: 30px;
+}
+
+footer {
+    margin: 30px 0;
+    padding: 0 120px;
+}
+footer .left {
+    float: left;
+}
+footer .right {
+    float: right;
+}
