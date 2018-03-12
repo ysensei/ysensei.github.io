@@ -2,27 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>ETH1元竞猜历史中奖记录 | 1 Finney Quiz Prize History |iGame.cm |Ethereum Game Website </title>
+    <meta name=”description” content='ETH1元竞猜历史中奖记录| 1 Finney Quiz Prize History | ETH 1元竞猜 | ETH dApp 游戏 | Ethereum dApp Game | iGame.cm'>
+    <meta name=”keyword” content='iGame.cm,1 Finney Quiz,ETH 1元竞猜,Ethereum游戏,ETH dApp 游戏,Ethereum dApp Game'>
     <link href="css/common.css" rel="stylesheet">
+    <link href="css/history.css" rel="stylesheet">
 </head>
 <body>
 <nav>
     <div class="container-wide">
         <div class="row">
             <div class="col m3">
-                <a href="javascript:;" class="logo">logo</a>
+                <a href="index.html" class="logo"></a>
             </div>
             <div class="col m9">
-                <div class="right">
+                <div class="navBar">
                     <ul>
                         <li>
-                            <a href="#h">如何投注</a>
+                            <a href="index.html#buy">如何投注</a>
                         </li>
                         <li>
-                            <a href="#w">关于项目</a>
+                            <a href="index.html#about">关于项目</a>
                         </li>
                         <li>
-                            <a href="javascript:;">Telegram群</a>
+                            <a href="https://t.me/joinchat/F0GpYg9HTu4_4dQbL8sVLg" target="_blank">telegram群</a>
                         </li>
                     </ul>
                 </div>
@@ -33,74 +36,74 @@
 <div class="container">
     <table border="1" align="center">
         <tbody align="center">
-        <!--<tr>-->
-            <!--<th align="center">期号</th>-->
-            <!--<th align="center">开奖时间</th>-->
-            <!--<th align="center">中奖号码</th>-->
-            <!--<th align="center">获奖者地址</th>-->
-            <!--<th align="center">区块高度</th>-->
-            <!--<th align="center">查看详情</th>-->
-        <!--</tr>-->
-        <!--<tr>-->
-            <!--<td>127</td>-->
-            <!--<td>2018年3月4日 15:45:25</td>-->
-            <!--<td>893</td>-->
-            <!--<td>0xced2faa1d2e10a43d98a04c3b505296cde6342c7</td>-->
-            <!--<td>2761975</td>-->
-            <!--<td><a href="javascript:;">view-more</a></td>-->
-        <!--</tr>-->
-        <!--<tr>-->
-            <!--<td>127</td>-->
-            <!--<td>2018年3月4日 15:45:25</td>-->
-            <!--<td>893</td>-->
-            <!--<td>0xced2faa1d2e10a43d98a04c3b505296cde6342c7</td>-->
-            <!--<td>2761975</td>-->
-            <!--<td>-->
-                <!--<a href="javascript:;">view-more</a>-->
-            <!--</td>-->
-        <!--</tr>-->
         </tbody>
     </table>
 </div>
-<script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v2.min.js" type="text/javascript"></script>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<footer>
+    <div class="left">Copyright © 2018 igame.cm | All rights reserved</div>
+    <div class="right"><a href="mailto:ysensei2018@gmail.com">Contact Us</a> | <a href="https://github.com/ysensei" target="_blank">GitHub Source Code</a></div>
+</footer>
+
+<script charset="utf-8" src="js/ethers-v2.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
 <script src="js/history.js"></script>
 
 <script type="text/javascript">
     var _html = '<tr>' +
-        '<th>期号</th>' +
-        '<th>开奖时间</th>' +
-        '<th>中奖号码</th>' +
-        '<th>获奖者地址</th>' +
-        '<th>区块高度</th>' +
-        '<th>查看详情</th>' +
+        '<th style="width: 12.5%;">期号</th>' +
+        '<th style="width: 18.75%;">开奖时间</th>' +
+        '<th style="width: 12.5%;">中奖号码</th>' +
+        '<th style="width: 31.25%;">获奖者地址</th>' +
+        '<th style="width: 12.5%;">区块高度</th>' +
+        '<th style="width: 12.5%;">查看详情</th>' +
         '</tr>';
-    function renderTable (num, time, prizeNum, address, height ,details ) {
-        _html += '<tr>' +
-            '<td>' + num + '</td>' +
-            '<td>' + time + '</td>' +
-            '<td>' + prizeNum + '</td>' +
-            '<td>' + address + '</td>' +
-            '<td>' + height + '</td>' +
-            '<td><a href="'+details+'" target="_blank">查看详情</a></td>' +
+
+    function renderTable (resultList) {
+        var data = _html;
+        for(var i=0; i <resultList.length; i++){
+            var item = resultList[i];
+            data += '<tr>' +
+            '<td>' + item.num + '</td>' +
+            '<td>' + item.time + '</td>' +
+            '<td>' + item.prizeNum + '</td>' +
+            '<td>' + item.address + '</td>' +
+            '<td>' + item.height + '</td>' +
+            '<td><a href="'+item.details+'" target="_blank">view-more</a></td>' +
             '</tr>';
-        $('tbody').html(_html);
+        }
+        $('tbody').html(data);
     }
 
-    var contractAddress = '0x1a07369b3df4390d05189cc5bb0f9ad778cc7f7b';
-    var abi = '[{"constant":true,"inputs":[],"name":"getCurrentPeriod","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"winnersResult","outputs":[{"name":"addr","type":"address"},{"name":"number","type":"uint256"},{"name":"blockNumber","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCurrentNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"getEthers","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"pd","type":"uint256"}],"name":"getPrizeResult","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"}]';
+    function sort(arr){
+        for(var j=0;j<arr.length-1;j++){
+        //两两比较，如果前一个比后一个大，则交换位置。
+        for(var i=0;i<arr.length-1-j;i++){
+                if(arr[i].num<arr[i+1].num){
+                    var temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp;
+                }
+            } 
+        }
+    }
+
+    var contractAddress = '0x8768C2F5A28932A9a791Cfd840DB168240D77f4B';
+    var abi = '[{"constant":true,"inputs":[],"name":"getCurrentPeriod","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"winnersResult","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCurrentNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"getEthers","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"pd","type":"uint256"}],"name":"getPrizeResult","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"}]';
 
     var network = ethers.providers.networks.ropsten;
     var provider = ethers.providers.getDefaultProvider(network); //ropsten测试网络
 
     //var provider = ethers.providers.getDefaultProvider();
     var contract = new ethers.Contract(contractAddress, abi, provider);
+    var array= [];
 
     function getCurrentPeriod() {
         contract.getCurrentPeriod().then(function (result) {
             console.log('currentPeriod is: ' + result);
             $("#current-period").text(result);
-            while(result>1){
+            var num = result-30;
+            while(result>num && result>1){
                 getPrizeResult(--result);
             }
         });
@@ -123,13 +126,21 @@
             console.log(date.toLocaleString());
             $("#prize-time").text(date.toLocaleString());
             var details = "https://ropsten.etherscan.io/address/"+address+"#internaltx"
-            renderTable(period,date.toLocaleString() ,prizeNum,address,blockHeight ,details )
+            var item ={
+                num: period,
+                time : date.toLocaleString(),
+                prizeNum : prizeNum,
+                address : address,
+                height : blockHeight,
+                details : details
+            };
+            array.push(item);
+            sort(array);
+            renderTable(array);
         });
     }
     getCurrentPeriod();
 
-    
 </script>
-
 </body>
 </html>

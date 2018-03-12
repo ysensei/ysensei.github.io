@@ -23,10 +23,10 @@ nav {
     width: 100%;
     height: 80px;
     line-height: 80px;
-    padding: 30px 0 0;
+    padding: 5px 0 5px;
 }
 nav .container-wide {
-    padding: 0 120px;
+    padding: 0 12%;
 }
 nav .container-wide .row .col {
     float: left;
@@ -48,4 +48,44 @@ nav .container-wide .m9 ul li {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+/*导航栏*/
+nav .container-wide {
+    height: 80px;
+    position: relative;
+}
+nav .container-wide .logo{
+    display: block;
+    background: url(../img/logo.jpg) center no-repeat;
+    width: 186px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+nav .container-wide .navBar {
+    position: absolute;
+    right: 12%;
+    top: 50%;
+    margin-top: -40px;
+}
+
+
+footer {
+    font-size: 16px;
+    color: #cacaca;
+    background-color: #181e28;
+    height: 77px;
+    line-height: 77px;
+    padding: 0 12%;
+}
+footer .left {
+    float: left;
+}
+footer .right {
+    float: right;
+}
+
+footer a{
+    color: #cacaca;
 }

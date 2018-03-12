@@ -1,0 +1,24 @@
+.container {
+    padding: 30px 12% 120px;
+}
+.container .title {
+    font-size: 27px;
+    color: #555555;
+    text-align: center;
+}
+.container .cont {
+    font-size: 16px;
+    color: #555555;
+    line-height: 30px;
+    padding-top: 30px;
+}
+.container .cont .category{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.container .cont p {
+    text-indent: 32px;
+    margin-bottom: 16px;
+}

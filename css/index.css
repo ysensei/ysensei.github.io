@@ -1,12 +1,45 @@
+/*正文*/
+.container .content {
+    padding: 0 12%;
+}
 
-.container {
-    padding: 0 120px;
+
+.container .first-part {
+    color: #fff;
+    background: url("../img/bg-index.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 570px;
+    position: relative;
+}
+.container .first-part .first-part-cont {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.container .first-part .title {
+    font-size: 36px;
 }
 .container .first-part .head {
-    padding: 0 30px;
+    width: 300px;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    padding-bottom: 10px;
 }
+.container .first-part .head .current-period {
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 14px;
+}
+
 .container .first-part .cont {
-    padding: 30px 0 30px 60px;
+    margin-top: 18px;
+    font-size: 20px;
+}
+.container .first-part .info {
+    margin-top: 10px;
+    font-size: 12px;
 }
 .container .first-part .info .row{
     display: flex;
@@ -15,46 +48,146 @@
     flex: 1;
 }
 .container .first-part .info .row .m5 {
-    width: 50%;
+    margin-top: 6px;
+    font-size: 14px;
 }
 .container .first-part .btn {
     margin-top: 20px;
 }
 .container .first-part .btn a {
     display: block;
-    text-align: right;
-    padding-right: 100px;
+    font-size: 13px;
+    color: #825fe4;
+    width: 125px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: #fff;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
 }
 
-.container .title {
-    font-size: 30px;
+
+/*second part and third part common*/
+.container .second-part .title,.container .third-part .title{
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
-    margin-top: 30px;
+    margin: 0px auto;
+    font-size: 32px;
+    color: #555555;
 }
+
+
+
+.container .second-part{
+    padding-top: 80px;
+    padding-bottom: 170px;
+}
+
 .container .second-part .cont {
     display: flex;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 .container .second-part .cont .left {
     flex: 1;
 }
-.container .second-part .cont .right {
-    flex: 1;
+.container .second-part .cont .left img{
+    width: 374px;
+    height: 370px;
 }
-
-.container .third-part .cont {
-    margin-top: 20px;
-    text-indent: 34px;
+.container .second-part .cont .right {
+    font-size: 18px;
+    color: #555555;
+    flex: 1;
+    padding: 10px 0 0 132px;
+}
+.container .second-part .cont .right img {
+    width: 108px;
+    height: 108px;
+    padding-left: 40px;
+}
+.container .second-part .cont .right li {
     line-height: 30px;
 }
 
-footer {
-    margin: 30px 0;
-    padding: 0 120px;
+.container .second-part .cont .right .right-btn {
+    border-radius: 100px;
+    width: 151px;
+    height: 47px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    background-color: #7d7cf9;
+    text-align: center;
+    line-height: 47px;
+    margin: 25px auto 0 40px;
 }
-footer .left {
-    float: left;
+
+
+.container .third-part {
+    padding-top: 80px;
+    padding-bottom: 140px;
+    background-color: #f6f8f9;
 }
-footer .right {
-    float: right;
+
+.container .third-part .cont {
+    font-size: 16px;
+    color: #555555;
+    margin-top: 40px;
+    line-height: 25px;
+}
+.container .third-part .cont p {
+    text-align: center;
+}
+.container .third-part .cont .middle {
+    font-size: 25px;
+    color: #555555;
+    font-weight: 400;
+    margin-top: 34px;
+    margin-bottom: 20px;
+    line-height: 34px;
+}
+
+.container .third-part .btn {
+    width: 164px;
+    height: 47px;
+    position: relative;
+    margin: 48px auto 0;
+}
+
+.container .third-part .btn a {
+    margin: 48px auto 0;
+    border-radius: 100px;
+    width: 151px;
+    height: 47px;
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    background-color: #7d7cf9;
+    text-align: center;
+    line-height: 47px;
+}
+.container .third-part .btn :before {
+    display: block;
+    content: '';
+    width: 126px;
+    height: 62px;
+    background: url("../img/arrow-right.png") no-repeat;
+    position: absolute;
+    left: -148px;
+    top: -10px;
+}
+.container .third-part .btn :after {
+    display: block;
+    content: '';
+    width: 126px;
+    height: 62px;
+    background: url("../img/arrow-left.png") no-repeat;
+    position: absolute;
+    right: -148px;
+    top: -3px;
+
 }

@@ -2,7 +2,9 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>iGame.cm | 1 Finney Quiz | ETH 1元竞猜 | Ethereum Game Website </title>
+    <meta name=”description” content='1 Finney Quiz | ETH 1元竞猜 | ETH dApp 游戏 | Ethereum dApp Game | iGame.cm'>
+    <meta name=”keyword” content='iGame.cm,1 Finney Quiz,ETH 1元竞猜,Ethereum游戏,ETH dApp 游戏,Ethereum dApp Game'>
     <link href="css/common.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 </head>
@@ -11,19 +13,19 @@
     <div class="container-wide">
         <div class="row">
             <div class="col m3">
-                <a href="javascript:;" class="logo">logo</a>
+                <a href="#" class="logo"></a>
             </div>
             <div class="col m9">
-                <div class="right">
+                <div class="navBar">
                     <ul>
                         <li>
-                            <a href="#h">如何投注</a>
+                            <a href="#buy">如何投注</a>
                         </li>
                         <li>
-                            <a href="#w">关于项目</a>
+                            <a href="#about">关于项目</a>
                         </li>
                         <li>
-                            <a href="javascript:;">Telegram群</a>
+                            <a href="https://t.me/joinchat/F0GpYg9HTu4_4dQbL8sVLg" target="_blank">telegram群</a>
                         </li>
                     </ul>
                 </div>
@@ -32,64 +34,87 @@
     </div>
 </nav>
 <div class="container">
-    <div class="first-part">
-        1 Finney Quiz<div class="head">当前<span id="current-period">--</span>期</div>
-        <div class="cont">当前号码<span id="current-num">--</span>，剩余<span id="remain-num">--</span>个号码（投注<span id="remain-eth-num">--</span>ETH即可开奖）</div>
-        <div class="info">
-            <div class="row">
-                <div class="col m5">上期中奖号码：<span id="prize-num">---</span></div>
-                <div class="col m5">开奖时间：<span id="prize-time">----年-月-日 --：--：--</span></div>
+    <div class="first-part content">
+        <div class="first-part-cont">
+            <div class="head">
+                <span class="title">1 Finney Quiz</span>
+                <span class="current-period">当前<span id="current-period">--</span>期</span>
             </div>
-            <div class="row">
-                <div class="col m5">中奖地址：<span id="prize-address">------------------------------------------</span></div>
-                <div class="col m5">区块高度：<span id="block-height">----</span></div>
+            <div class="cont">
+                <div>当前号码<span id="current-num">--</span>，剩余<span id="remain-num">--</span>个号码</div>
+                <div>(投注<span id="remain-eth-num">--</span>ETH即可开奖)</div>
             </div>
-        </div>
-        <div class="btn">
-            <a class="more-btn" href="javascript:;">查看更多</a>
+            <div class="info">
+                <div class="row">
+                    <div class="col m5">上期中奖号码：<span id="prize-num">---</span></div>
+                </div>
+                <div class="row">
+                    <div class="col m5">中奖地址：<span id="prize-address">------------------------------------------</span></div>
+                </div>
+                <div class="row">
+                    <div class="col m5">开奖时间：<span id="prize-time">----年-月-日 --：--：--</span></div>
+                </div>
+                <div class="row">
+                    <div class="col m5">区块高度：<span id="block-height">----</span></div>
+                </div>
+            </div>
+            <div class="btn">
+                <a class="more-btn" href="history.html" target="_blank">查看更多</a>
+            </div>
         </div>
     </div>
-    <div class="second-part">
-        <div class="title">如何投注？</div>
+    <div class="second-part content" id="buy">
+        <div class="title">如何购买</div>
         <div class="cont">
-            <div class="left">left</div>
+            <div class="left"><img src="img/bg-index-left.jpg"></div>
             <div class="right">
                 <ul>
-                    <li>1.打开ImToken类钱包</li>
-                    <li>2.扫码或者输入地址：0x1a07369b3df4390d05189cc5bb0f9ad778cc7f7b
-                        <img src="" />
+                    <li>1.打开mToken类钱包</li>
+                    <li>2.扫码或者输入地址：0x8768C2F5A28932A9a791Cfd840DB168240D77f4B
+                        <img src="img/qrcode.png" />
                     </li>
-                    <li>3.输入0.001倍数的金额（0.001为1注，倍数为多注）</li>
-                    <li>4.等待当期售卖完成，自动开奖</li>
+                    <li>3.输入0.001倍数的金额<br/>（0.001为1注，倍数为多注）</li>
+                    <li>4.等待当期1000个号码售卖结束，程序自动开奖</li>
                 </ul>
+                <a href="detail-how-to-buy.html" class="right-btn">查看更多</a>
             </div>
         </div>
     </div>
-    <div class="third-part">
+    <div class="third-part content" id="about">
         <div class="title">关于项目</div>
         <div class="cont">
-            我们是一个类似于1元云购的ETH项目，您只需要最低投注0.001即可购买一个号码（假如您投注0.01ETH，就会获得10个号码），目前每销售1000个号码，会自动开奖，获奖者会得到0.99个ETH作为回报。
+            <div>
+                <p>这是一个类似于1元云购的ETH项目，</p>
+                <p>最低投注0.001即可购买一个号码（假如您投注0.01ETH，就会获得10个号码）</p>
+                <p>每销售1000个号码，会自动开奖，获奖者会得到0.99ETH作为回报</p>
+            </div>
+            <div class="middle">
+                <p>目前您可以通过交易详情页，</p>
+                <p>通过我们发送给您的ETH金额，得到您当期的投注号码，</p>
+                <p>开奖后，您的地址会自动收到当期那一笔奖金。</p>
+            </div>
+            <div>
+                <p>这是一个绝对公平的全部运行在ETH上面的dApp，</p>
+                <p>没有人可以改变程序的结果，您可以去审计我们的代码。</p>
+            </div>
 
-            目前您可以通过交易详情页，通过我们发送给您的ETH金额，得到您当期的投注号码，开奖后，可以核对中奖号码是否在自己投注的号码中。
-
-            我们是一个绝对公平的全部运行在ETH上面的dApp，没有人可以改变程序的结果，您可以去审计我们的代码。
         </div>
         <div class="btn">
-            <a href="javascript:;">查看源码</a>
+            <a href="detail-about-project.html">查看详情</a>
         </div>
     </div>
 </div>
 <footer>
     <div class="left">Copyright © 2018 igame.cm | All rights reserved</div>
-    <div class="right">aaa@gmail.com|  contact us</div>
+    <div class="right"><a href="mailto:ysensei2018@gmail.com">Contact Us</a> | <a href="https://github.com/ysensei" target="_blank">GitHub Source Code</a></div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script charset="utf-8" src="https://cdn.ethers.io/scripts/ethers-v2.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/ethers-v2.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-    var contractAddress = '0x1a07369b3df4390d05189cc5bb0f9ad778cc7f7b';
-    var abi = '[{"constant":true,"inputs":[],"name":"getCurrentPeriod","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"winnersResult","outputs":[{"name":"addr","type":"address"},{"name":"number","type":"uint256"},{"name":"blockNumber","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCurrentNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"getEthers","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"pd","type":"uint256"}],"name":"getPrizeResult","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"}]';
+    var contractAddress = '0x8768C2F5A28932A9a791Cfd840DB168240D77f4B';
+    var abi = '[{"constant":true,"inputs":[],"name":"getCurrentPeriod","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"winnersResult","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCurrentNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"getEthers","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"pd","type":"uint256"}],"name":"getPrizeResult","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"}]';
 
     var network = ethers.providers.networks.ropsten;
     var provider = ethers.providers.getDefaultProvider(network); //ropsten测试网络
