@@ -5,6 +5,7 @@
     <title>iGame.cm | 1 Finney Quiz | ETH 1元竞猜 | Ethereum Game Website </title>
     <meta name=”description” content='1 Finney Quiz | ETH 1元竞猜 | ETH dApp 游戏 | Ethereum dApp Game | iGame.cm'>
     <meta name=”keyword” content='iGame.cm,1 Finney Quiz,ETH 1元竞猜,Ethereum游戏,ETH dApp 游戏,Ethereum dApp Game'>
+    <link rel="shortcut icon" href="favicon.ico" />
     <link href="css/common.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
 </head>
@@ -70,7 +71,7 @@
             <div class="right">
                 <ul>
                     <li>1.打开mToken类钱包</li>
-                    <li>2.扫码或者输入地址：0x8768C2F5A28932A9a791Cfd840DB168240D77f4B
+                    <li>2.扫码或者输入地址：0xE305d64651761d103a1AB96382B7Bd48D54ce10b
                         <img src="img/qrcode.png" />
                     </li>
                     <li>3.输入0.001倍数的金额<br/>（0.001为1注，倍数为多注）</li>
@@ -113,7 +114,7 @@
 <script charset="utf-8" src="js/ethers-v2.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-    var contractAddress = '0x8768C2F5A28932A9a791Cfd840DB168240D77f4B';
+    var contractAddress = '0xE305d64651761d103a1AB96382B7Bd48D54ce10b';
     var abi = '[{"constant":true,"inputs":[],"name":"getCurrentPeriod","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"winnersResult","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCurrentNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"getEthers","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"pd","type":"uint256"}],"name":"getPrizeResult","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"}]';
 
     var network = ethers.providers.networks.ropsten;
