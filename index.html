@@ -20,7 +20,7 @@
                 <div class="navBar">
                     <ul>
                         <li>
-                            <a href="#buy">如何投注</a>
+                            <a href="#buy">如何购买</a>
                         </li>
                         <li>
                             <a href="#about">关于项目</a>
@@ -75,9 +75,9 @@
                         <img src="img/qrcode.png" />
                     </li>
                     <li>3.输入0.001倍数的金额<br/>（0.001为1注，倍数为多注）</li>
-                    <li>4.等待当期1000个号码售卖结束，程序自动开奖</li>
+                    <li>4.等待当期1000个号码售卖结束，程序自动开奖<br/>（推荐Gas Price为2-3Gwei）</li>
                 </ul>
-                <a href="detail-how-to-buy.html" class="right-btn">查看更多</a>
+                <a href="javascript:buyNow()" id="buy-now" class="right-btn">立即购买</a>
             </div>
         </div>
     </div>
@@ -125,7 +125,7 @@
 
     function getCurrentNum() {
         contract.getCurrentNumber().then(function (result) {
-            console.log('CurrentNumber is: ' + result);
+//            console.log('CurrentNumber is: ' + result);
             $("#current-num").text(result)
             var num = 1000-parseInt(result)
             $("#remain-num").text(num)
@@ -135,7 +135,7 @@
 
     function getCurrentPeriod() {
         contract.getCurrentPeriod().then(function (result) {
-            console.log('currentPeriod is: ' + result);
+//            console.log('currentPeriod is: ' + result);
             $("#current-period").text(result);
             getPrizeResult(--result);
         });
@@ -143,7 +143,7 @@
 
     function getPrizeResult(number) {
         contract.getPrizeResult(number).then(function (result) {
-            console.log('PrizeResult is: ' + result);
+//            console.log('PrizeResult is: ' + result);
             $("#prize-num").text(result[1]);
             $("#prize-address").text(result[0]);
             $("#block-height").text(result[2]);
@@ -153,18 +153,57 @@
 
     function getTimestamp(number) {
         provider.getBlock(number).then(function(block) {
-            console.log('blockInfo is: '+block.timestamp);
+//            console.log('blockInfo is: '+block.timestamp);
             var date = new Date();
             date.setTime(block.timestamp * 1000);
-            console.log(date.toLocaleString());
+//            console.log(date.toLocaleString());
             $("#prize-time").text(date.toLocaleString());
         });
     }
 
+
+    function buyNow() {
+        if (typeof web3 !== 'undefined') {
+            var account = web3.eth.accounts[0];
+            if(account == null){
+                alert("请解锁您的钱包！");
+                return;
+            }
+            var params = [{
+                "from": account,
+                "to": "0xE305d64651761d103a1AB96382B7Bd48D54ce10b",
+                "gas": "0x30D40",
+                "gasPrice": "0xB2D05E00",
+                "value": "0x38d7ea4c68000",
+                "data":"0x0"
+            }];
+            var options = { "method": "eth_sendTransaction", // 调用的方法名
+                "params": params
+            };
+
+            var provider  = web3.currentProvider;
+            provider.sendAsync(options, function(error, result) {
+                console.log("----"+result);
+                if (error) return;
+            });
+        } else {
+        }
+    }
+
+    function isExistMask() {
+        if (typeof web3 !== 'undefined') {
+        }else{
+            $("#buy-now").attr("href", "detail-how-to-buy.html")
+            $("#buy-now").attr("target", "_blank")
+            $("#buy-now").text("查看更多");
+        }
+    }
+
+    isExistMask();
     getCurrentNum();
     getCurrentPeriod();
 
 </script>
-
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1273126926' style='display:none;' %3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s19.cnzz.com/z_stat.php%3Fid%3D1273126926' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 </html>
