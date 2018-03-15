@@ -3,6 +3,13 @@
     background-color: #f7f8fa;
     min-height: 500px;
 }
+.container .title{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px auto;
+    width: 320px;
+    height: 60px;
+}
 
 .container table{
     width: 100%;

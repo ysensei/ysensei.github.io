@@ -38,6 +38,7 @@
     </div>
 </nav>
 <div class="container">
+    <div class="title">Small Quiz 历史记录</div>
     <table border="1" align="center">
         <tbody align="center">
         </tbody>
@@ -92,7 +93,7 @@
         }
     }
 
-    var contractAddress = '0xE305d64651761d103a1AB96382B7Bd48D54ce10b';
+    var contractAddress = '0x7E71d4C700aC7c7d0a4eAbF22e3FBac4EC0cB64a';
     var abi = '[{"constant":true,"inputs":[],"name":"getCurrentPeriod","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getBalance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"winnersResult","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCurrentNumber","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"getEthers","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"pd","type":"uint256"}],"name":"getPrizeResult","outputs":[{"name":"","type":"address"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":true,"stateMutability":"payable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"}]';
 
     var network = ethers.providers.networks.ropsten;
